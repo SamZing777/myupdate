@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ update.title }}
+{% endblock %}
+
+
+{% block content %}
+<br>
+<div class="container mt-4">
+	<div class="row">
+		<a href="{% url 'index' %}"><i class="fa fa-arrow-left text-warning text-lg"></i></a>
+		<div class="col col-sm text-center">
+			<h4>Matter _ {{ update.topic }} </h4>
+		</div>
+	</div>
+</div>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col col-sm col-md col-lg text-center">
+			<h4>By: {{ update.informant }}</h4>
+			<p>{{ update.description }}</p>
+			<p>Happening in: {{ update.area }}</p>
+			<i>Updated at: {{ update.date_posted }}</i>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

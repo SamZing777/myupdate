@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Signup
+{% endblock %}
+
+
+{% block content %}
+<br>
+<div class="container mt-4">
+	<div class="row">
+		<div class="col col-sm text-center">
+			<h2>Signup</h2>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col col-sm text-center">
+			<form method="POST">
+				{% csrf_token %}
+					<table class="table table-stripped  table-responsive-sm">
+						<tr>
+							<td>{{ form.username.label_tag }} </td>
+							<td>{{ form.username }}</td>
+						</tr>
+						<tr>
+							<td>{{ form.email.label_tag }} </td>
+							<td>{{ form.email }}</td>
+						</tr>
+						<tr>
+							<td>{{ form.password1.label_tag }} </td>
+							<td>{{ form.password1 }}</td>
+						</tr>
+						<tr>
+							<td>{{ form.password2.label_tag }} </td>
+							<td>{{ form.password2 }}</td>
+						</tr>
+					</table>
+				
+				<input class="btn btn-success" type="submit" value="Signup">
+			</form>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+{% endblock %}
